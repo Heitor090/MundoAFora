@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MundoAFora.MainPage"
+             BackgroundColor="Black">
+
+    <VerticalStackLayout Padding="16" Spacing="12" WidthRequest="600" VerticalOptions="Center" HorizontalOptions="Center">
+        
+        <Grid RowDefinitions="*,*,*" HorizontalOptions="Center" VerticalOptions="Center">
+            <Image Source="logo_com_fundo.png" Grid.Row="0"  HeightRequest="400" HorizontalOptions="Center"/>
+            <Label Grid.Row="1" Text="Bem Vindo ao Mundo a Fora!" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+            <Button Grid.Row="2" Text="Iniciar" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="DarkOliveGreen" Margin="10,30,0,40"/>
+
+
+
+
+        </Grid>
+
+    </VerticalStackLayout>
+       
+
+</ContentPage>
