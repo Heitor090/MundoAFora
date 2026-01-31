@@ -8,6 +8,8 @@
 
             //Registering the route for the Login page
             Routing.RegisterRoute(nameof(Login), typeof(Login));
+            Routing.RegisterRoute(nameof(CadastroUsuario), typeof(CadastroUsuario));
+            Routing.RegisterRoute(nameof(PerfilUsuario), typeof(PerfilUsuario));
         }
     }
 }

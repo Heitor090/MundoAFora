@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace MundoAFora
 {
-   
-        partial class Login
-        {
-            public Login()
-            {
-                InitializeComponent();
-            }
+    partial class CadastroUsuario
+    {
+        public CadastroUsuario()
+        { 
+            InitializeComponent();
+        }
         async void OnCadastrarClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("CadastroUsuario");
+            await Shell.Current.GoToAsync("PerfilUsuario");
 
         }
-        }
-    
 
+    }
 }
