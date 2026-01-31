@@ -1,0 +1,27 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MundoAFora.PerfilUsuario"
+             BackgroundColor="{StaticResource Cotton}"
+			 >
+
+    <ScrollView>
+        <Border Stroke="Black" StrokeShape="10" WidthRequest="1890" HeightRequest="980">
+            <VerticalStackLayout Padding="16" Spacing="12" WidthRequest="1400" >
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto">
+                <Image Grid.Column="0" Source="icone_perfil.jpg" HeightRequest="150" WidthRequest="150" />
+                    <Label Grid.Column="1" Text="TESTE"/>
+
+
+
+
+
+                </Grid>
+            </VerticalStackLayout>
+        </Border>
+
+    </ScrollView>
+
+
+
+
+</ContentPage>
