@@ -9,6 +9,7 @@
     <Color x:Key="Duna">#d7c9aa</Color>
     <Color x:Key="GreenVacation">#a0b18a</Color>
     <Color x:Key="GreenFlag">#6e7f2b</Color>
+    <Color x:Key="CancelRed">#ff564d</Color>
 
     <Color x:Key="Primary">#512BD4</Color>
     <Color x:Key="PrimaryDark">#ac99ea</Color>

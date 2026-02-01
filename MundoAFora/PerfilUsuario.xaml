@@ -4,12 +4,56 @@
              BackgroundColor="{StaticResource Cotton}"
 			 >
 
+
     <ScrollView>
         <Border Stroke="Black" StrokeShape="10" WidthRequest="1890" HeightRequest="980">
-            <VerticalStackLayout Padding="16" Spacing="12" WidthRequest="1400" >
-            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto">
-                <Image Grid.Column="0" Source="icone_perfil.jpg" HeightRequest="150" WidthRequest="150" />
-                    <Label Grid.Column="1" Text="TESTE"/>
+            <VerticalStackLayout Padding="16" Spacing="12" WidthRequest="1700" HeightRequest="900" >
+                <Grid ColumnDefinitions="*,Auto,*,*" RowDefinitions="*,Auto,Auto,*,Auto">
+
+                    <Image Grid.Column="0" Grid.Row="0" Source="icone_perfil.png" HeightRequest="150" WidthRequest="150" />
+
+                    <Label Grid.Column="0" Grid.Row="1" Text="Biografia:" FontAttributes="Bold" Margin="150,40,0,0"/>
+                    <Entry Grid.Column="0" Grid.Row="2" Placeholder="Bio" Margin="50,25,100,10" HeightRequest="200"/>
+
+                    <Label Grid.Column="1" Text="Nome:" Grid.Row='0' FontAttributes="Bold" Margin="0,0,0,30" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="0" Placeholder="João Silva" Margin="0,50,0,00" WidthRequest="300" VerticalOptions="Center"/>
+
+                    <Label Grid.Column="2" Text="Email:" Grid.Row="0" FontAttributes="Bold" Margin="30,0,0,30" VerticalOptions="Center"/>
+                    <Entry Grid.Column="2" Placeholder="abcde@gmail.com" Grid.Row="0" Margin="30,50,20,00" WidthRequest='405' VerticalOptions="Center"/>
+
+                    <Label Grid.Column="1" Text="Endereço:" Grid.Row='1' FontAttributes="Bold" Margin="0,0,0,30" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="1" Placeholder="Rua Tito, Lapa" Margin="0,50,0,00" WidthRequest="300" VerticalOptions="Center"/>
+
+                    <Label Grid.Column="2" Text="CEP:" Grid.Row="1" FontAttributes="Bold" Margin="30,0,0,30" VerticalOptions="Center"/>
+                    <Entry Grid.Column="2" Placeholder="XXXXX-XXX" Grid.Row="1" Margin="0,50,200,00" WidthRequest='200' VerticalOptions="Center" Keyboard="Numeric"/>
+
+                    <Label Grid.Column="1" Text="País de interesse:" Grid.Row='2' FontAttributes="Bold" Margin="0,0,0,30" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="2" Placeholder="Brasil" Margin="0,50,0,00" WidthRequest="300" VerticalOptions="Center"/>
+
+                    <Label Grid.Column="2" Text="Nacionalidade" Grid.Row="2" FontAttributes="Bold" Margin="30,0,0,30" VerticalOptions="Center"/>
+                    <Entry Grid.Column="2" Placeholder="ex.Brasileiro" Grid.Row="2" Margin="0,50,200,00" WidthRequest='200' VerticalOptions="Center"/>
+
+                    <Label Grid.Column="1" Text="Tipo de perfil:" Grid.Row='3' FontAttributes="Bold" Margin="0,0,0,30" VerticalOptions="Center"/>
+                    <Picker Grid.Column="1" Grid.Row="3"  Margin="0,50,0,00" WidthRequest="300" VerticalOptions="Center">
+                    <Picker.Items>
+                        <x:String>Imigrante</x:String>
+                        <x:String>Residente</x:String>
+                        <x:String>Turista</x:String>
+                    </Picker.Items>
+                    </Picker>
+
+                    <Button Grid.Column="1" Text="Salvar" Grid.Row="4" FontAttributes="Bold" BackgroundColor="{StaticResource GreenFlag}"  VerticalOptions="Center" Margin="0,200,0,0" Clicked="OnSalvarClicked"/>
+                    <Button Grid.Column="2" Text="Descartar Alterações" Grid.Row="4" FontAttributes="Bold" BackgroundColor="{StaticResource CancelRed}"  VerticalOptions="Center" Margin="140,200,0,0" Clicked="OnDescartarClicked"/>
+
+
+                    <Button Grid.Row="0" Grid.Column="3" ImageSource="voltar.png" HeightRequest='20' WidthRequest='200' Margin="410,0,0,130" BackgroundColor="Transparent" Clicked="OnSairClicked"/>
+
+
+
+
+
+
+
 
 
 
@@ -20,6 +64,53 @@
         </Border>
 
     </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<ScrollView>
+        <Border Stroke="Black" StrokeShape="10" WidthRequest="1890" HeightRequest="980">
+            <VerticalStackLayout Padding="16" Spacing="12" WidthRequest="1700" HeightRequest="900" >
+            <Grid ColumnDefinitions="*,Auto,Auto,*" RowDefinitions="*,Auto,Auto,*,Auto">
+                
+                <Image Grid.Column="0" Grid.Row="0" Source="icone_perfil.png" HeightRequest="150" WidthRequest="150" />
+                
+                    <Label Grid.Column="0" Grid.Row="1" Text="Biografia:" FontAttributes="Bold" Margin="150,40,0,0"/>
+                    <Entry Grid.Column="0" Grid.Row="2" Placeholder="Bio" Margin="50,25,0,0"/>
+
+                    <Label Grid.Column="1" Text="Nome:" Grid.Row='4' FontAttributes="Bold" Margin="0,0,0,30"/>
+                    <Entry Grid.Column="1" Grid.Row="5" Placeholder="João Silva" Margin="0,25,0,30" WidthRequest="300"/>
+                
+                    <Label Grid.Column="2" Text="Email" Grid.Row="4" FontAttributes="Bold" Margin="30,0,0,0"/>
+                    <Entry Grid.Column="2" Placeholder="abcde@gmail.com" Grid.Row="5" Margin="30,25,20,30" WidthRequest='405'/>
+                
+                
+                
+                
+                
+                
+                   
+
+
+
+
+
+                </Grid>
+            </VerticalStackLayout>
+        </Border>
+
+    </ScrollView>-->
 
 
 
