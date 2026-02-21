@@ -2,28 +2,61 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MundoAFora.MainPage"
-             BackgroundColor="Black">
-
-    <VerticalStackLayout Padding="16" Spacing="12" WidthRequest="600" VerticalOptions="Center" HorizontalOptions="Center">
-        
-        <Grid RowDefinitions="*,*,*" HorizontalOptions="Center" VerticalOptions="Center">
-            <Image Source="logo_com_fundo.png" Grid.Row="0" 
-                   HeightRequest="400" HorizontalOptions="Center" Margin="0,0,0,0"/>
-            
-            <Label Grid.Row="1" Text="Bem Vindo ao Mundo a Fora!" FontSize="40" FontAttributes="Bold"
-                   HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Margin="0,0,0,0"/>
-            
-            <Button Grid.Row="2" Text="Iniciar" FontSize="32" FontAttributes="Bold"
-                    HorizontalOptions="Center" VerticalOptions="Center" 
-                    BackgroundColor="DarkOliveGreen" Margin="10,30,0,40"
-                    Clicked="OnIniciarClicked"/>
+             BackgroundColor="{StaticResource Cotton}">
 
 
+    <VerticalStackLayout Padding="16" Spacing="12">
+        <Border Stroke="Black" StrokeShape="20" WidthRequest="1870" HeightRequest="100">
+            <Grid ColumnDefinitions="*,*,*,*,*,*" RowDefinitions="Auto" BackgroundColor="{StaticResource GreenTropical}" HeightRequest="100" Margin="0,0,0,0"  >
+                <Image Grid.Column="0" WidthRequest="150" Source="logo_sem_fundo.png"  Margin="0,10,165,0" HorizontalOptions="EndAndExpand"/>
+                <Label Grid.Column="0" 
+                       Grid.Row="0"  
+                       Text="Mundo a Fora"
+                       FontSize="30"
+                       FontAttributes="Bold" 
+                       Margin="100,25,0,0"
+                       HorizontalOptions="Center"/>
+
+                <Button class=" btn-custon" BackgroundColor="Transparent" Grid.Column="1"
+                        Grid.Row="0"
+                        Text="Países"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        Margin="0,10,50,0"
+                        HorizontalOptions="Center"/>
 
 
-        </Grid>
 
+
+
+                <Button class="btn-custon" BackgroundColor="Gray" Grid.Column="6" 
+                       Grid.Row="0" 
+                       Text=" Entrar" 
+                       FontSize="20" 
+                       FontAttributes="Bold"
+                       Margin="200,11,0,0" 
+                       HorizontalOptions="Center"/>
+
+
+                <Button class="btn-custon" BackgroundColor="Gray" Grid.Column="6" 
+                       Grid.Row="0" 
+                       Text="Cadastrar" 
+                       FontSize="20" 
+                       FontAttributes="Bold"
+                       Margin="0,10,50,0" 
+                       HorizontalOptions="Center"/>
+
+             
+
+
+
+
+            </Grid>
+        </Border>
     </VerticalStackLayout>
-       
+
 
 </ContentPage>
+
+
+ 
