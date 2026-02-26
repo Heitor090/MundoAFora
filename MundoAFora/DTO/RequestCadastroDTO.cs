@@ -9,7 +9,7 @@ namespace MundoAFora.DTO
 {
     public class RequestCadastroDTO
     {
-        public required string NomeCompleto {get; set;}
+        public required string Nome {get; set;}
         public required string CPF {get; set;}
         public required DateTime DataNascimento {get; set;}
         public required string Email {get; set;}
