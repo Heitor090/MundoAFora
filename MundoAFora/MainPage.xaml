@@ -4,7 +4,6 @@
              x:Class="MundoAFora.MainPage"
              BackgroundColor="{StaticResource Cotton}">
 
-    <VerticalStackLayout Spacing="0">
 
         <!-- HEADER -->
         <Border Stroke="Black" StrokeShape="RoundRectangle 20" HeightRequest="100">
@@ -102,8 +101,10 @@
 
             </Frame>
 
-        </Grid>
 
+
+        </Grid>
+        </Border>
     </VerticalStackLayout>
 
 </ContentPage>

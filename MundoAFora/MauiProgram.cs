@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MundoAFora.Services;
 
 namespace MundoAFora
 {
@@ -7,6 +8,10 @@ namespace MundoAFora
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+
+            builder.Services.AddSingleton<AuthService>();
+            builder.Services.AddSingleton<HttpClient>();
+
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
