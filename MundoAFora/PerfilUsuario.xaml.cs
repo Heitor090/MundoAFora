@@ -19,7 +19,7 @@ namespace MundoAFora
         }
         async void OnDescartarClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("CadastroUsuario");
+            await Shell.Current.GoToAsync("///MainPage");
         }
         async void OnSairClicked(object sender, EventArgs e)
         {

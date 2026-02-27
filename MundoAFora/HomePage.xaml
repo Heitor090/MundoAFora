@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MundoAFora.MainPage"
@@ -24,7 +24,6 @@
                 <!-- Nome -->
                 <Label Grid.Column="0"
                        Text="Mundo a Fora"
-                       TextColor="White"
                        FontSize="35"
                        FontAttributes="Bold"
                        VerticalOptions="Center"
@@ -32,7 +31,7 @@
                        Margin="100,0,0,0"/>
 
                 <!-- Menu -->
-                <Button Grid.Column="2"
+                <Button Grid.Column="4"
                         Text="Países"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -40,46 +39,16 @@
                         Margin="0,0,75,0"/>
 
 
-                <Button Grid.Column="3"
+                <Button Grid.Column="5"
                         ImageSource="icone_perfil.png"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
                         FontSize="22"
                         Margin="0,0,70,0"
-
-                        
-
-
                         HorizontalOptions="Center"
                         Clicked="OnPerfilClicked"/>
-                
 
-                <Button Grid.Column="4"
-                        Text="Entrar"
-                        BackgroundColor="{StaticResource GreenFlag}"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        FontSize="16"
-                        CornerRadius="20"
-                        WidthRequest="120"
-                        HeightRequest="70"
-                        HorizontalOptions="End" 
-                         Margin="0,0,10,0"
-                        Clicked="OnEntrarClicked"/>
-
-                <Button Grid.Column="5"
-                        Text="Cadastrar"
-                        BackgroundColor="{StaticResource GreenFlag}"
-                        TextColor="White"
-                        FontAttributes="Bold"
-                        FontSize="16"
-                        CornerRadius="20"
-                        WidthRequest="120"
-                        HeightRequest="70"
-
-                        HorizontalOptions="Center" 
-                        Clicked="OnCadastrarClicked"/>   
-
+             
             </Grid>
         </Border>
 
