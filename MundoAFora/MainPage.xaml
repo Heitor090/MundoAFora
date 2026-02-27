@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MundoAFora.MainPage"
              BackgroundColor="{StaticResource Cotton}">
 
+    <VerticalStackLayout Spacing="0">
 
         <!-- HEADER -->
         <Border Stroke="Black" StrokeShape="RoundRectangle 0" HeightRequest="100">
@@ -37,7 +38,7 @@
                         FontAttributes="Bold"
                         FontSize="22"
                         Margin="0,0,75,0"/>
-                
+
 
                 <Button Grid.Column="3"
                         ImageSource="icone_perfil.png"
@@ -45,9 +46,14 @@
                         FontAttributes="Bold"
                         FontSize="22"
                         Margin="0,0,70,0"
+
+                        
+
+
                         HorizontalOptions="Center"
                         Clicked="OnPerfilClicked"/>
                 
+
                 <Button Grid.Column="4"
                         Text="Entrar"
                         BackgroundColor="{StaticResource GreenFlag}"
@@ -70,8 +76,10 @@
                         CornerRadius="20"
                         WidthRequest="120"
                         HeightRequest="70"
+
                         HorizontalOptions="Center" 
                         Clicked="OnCadastrarClicked"/>   
+
             </Grid>
         </Border>
 
@@ -104,8 +112,6 @@
                 </VerticalStackLayout>
 
             </Frame>
-
-
 
         </Grid>
 
