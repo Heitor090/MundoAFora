@@ -22,19 +22,22 @@ namespace MundoAFora
             InitializeComponent();
             _authService = authService;
         }
-        async void OnCadastrarClicked(object sender, EventArgs e)
+            async void OnCadastrarClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("CadastroUsuario");
 
         }
             async void OnLoginClicked(object sender, EventArgs e)
             {
+              DisplayLoding();
+
                 string email = Email.Text;
                 string senha = Senha.Text;
 
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(senha))
             {
                 await DisplayAlert("Erro", "Por favor, preencha todos os campos.", "OK");
+                DisplayLoding();
                 return;
             }
 
@@ -48,14 +51,17 @@ namespace MundoAFora
 
             if (respostaLogin.Sucesso)
             {
+                DisplayLoding();
                 await Shell.Current.GoToAsync("CadastroUsuario");
                 return;
             }
                 await DisplayAlert("Erro de login", "Verifique seus dados novamente", "Tentar Novamente");
-
-
-
-            //await Shell.Current.GoToAsync("CadastarUsuario");
+                DisplayLoding();
+        }
+        public void DisplayLoding()
+        {
+            btnEntrar.IsVisible = !btnEntrar.IsVisible;
+            loading.IsVisible = !loading.IsVisible;
         }
 
 

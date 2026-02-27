@@ -8,7 +8,7 @@ namespace MundoAFora.DTO
 {
     public class ResponseCadastroDTO
     {
-        public bool Sucesso { get; set; }
+        public bool Erro { get; set; }
         public string Mensagem { get; set; } = string.Empty;
     }
 }

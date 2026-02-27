@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace MundoAFora
 {
@@ -14,6 +15,11 @@ namespace MundoAFora
         public CadastroUsuario()
         { 
             InitializeComponent();
+        }
+        public CadastroUsuario(AuthService authService)
+        {
+            InitializeComponent();
+            _authService = authService;
         }
         async void OnCadastrarClicked(object sender, EventArgs e)
         {
@@ -36,28 +42,38 @@ namespace MundoAFora
                 await DisplayAlert("Erro", "Por favor, preencha todos os campos.", "OK");
                 return;
             }
-            RequestCadastroDTO dadosUsuario = new RequestCadastroDTO
-            {
-                Email = email,
-                Senha = senha,
-                CPF = cpf,
-                DataNascimento = dataNascimento,
-                NomeCompleto = nome
+            try {
 
-            };
+                RequestCadastroDTO dadosUsuario = new RequestCadastroDTO
+                {
+                    Email = email,
+                    Senha = senha,
+                    CPF = cpf,
+                    DataNascimento = dataNascimento,
+                    Nome = nome
 
-            ResponseCadastroDTO respostaCadastro = await _authService.CadastrarAsync(dadosUsuario);
+                };
 
-            if (respostaCadastro.Sucesso)
-            {
-                await Shell.Current.GoToAsync("PerfilUsuario");
-                return;
+                Debug.WriteLine(dadosUsuario.DataNascimento.GetType());
+                Debug.WriteLine($"Dados do usuário: Nome={dadosUsuario.Nome}, CPF={dadosUsuario.CPF}, DataNascimento={dadosUsuario.DataNascimento}, Email={dadosUsuario.Email}");
+
+                ResponseCadastroDTO respostaCadastro = await _authService.CadastrarAsync(dadosUsuario);
+
+                if (!respostaCadastro.Erro)
+                {
+                    await Shell.Current.GoToAsync("PerfilUsuario");
+                    return;
+                }
+                await DisplayAlert("Erro de cadastro", respostaCadastro.Mensagem, "Tentar Novamente");
+
+            } catch (Exception erro) {
+
+                throw new Exception(erro.Message);
+            
             }
-            await DisplayAlert("Erro de login", "Verifique seus dados novamente", "Tentar Novamente");
 
 
 
-            //await Shell.Current.GoToAsync("CadastarUsuario");
         }
 
     }

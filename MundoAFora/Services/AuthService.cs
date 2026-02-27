@@ -1,6 +1,7 @@
 ﻿using MundoAFora.DTO;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http.Json;
 using System.Text;
@@ -11,7 +12,7 @@ namespace MundoAFora.Services
     public class AuthService
     {
         private readonly HttpClient _httpClient;
-        private const string BaseUrl = "https://localhost:7177/api/auth"; 
+        private const string BaseUrl = "https://localhost:7177/"; 
 
         public AuthService(HttpClient httpClient)
         {
@@ -43,20 +44,26 @@ namespace MundoAFora.Services
 
         public async Task<ResponseCadastroDTO> CadastrarAsync(RequestCadastroDTO dadosUsuario)
         {
-            var response = await _httpClient.PostAsJsonAsync($"{BaseUrl}api/Usuarios/Cadastrar", dadosUsuario);
+            var response = await _httpClient.PostAsJsonAsync(
+                $"{BaseUrl}api/Usuarios/cadastrar",
+                dadosUsuario
+            );
+
+            var content = await response.Content.ReadAsStringAsync();
+
+            Debug.WriteLine($"Status: {response.StatusCode}");
+            Debug.WriteLine($"Resposta da API: {content}");
+
             if (response.IsSuccessStatusCode)
             {
                 var result = await response.Content.ReadFromJsonAsync<ResponseCadastroDTO>();
-                return new ResponseCadastroDTO
-                {
-                    Sucesso = true,
-                    Mensagem = "Cadastro realizado com sucesso"
-                };
+                return result;
             }
+
             return new ResponseCadastroDTO
             {
-                Sucesso = false,
-                Mensagem = "Cadastro falhou. Tente novamente"
+                Erro = true,
+                Mensagem = content // 👈 agora você vê o erro real
             };
         }
     }
