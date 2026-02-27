@@ -6,15 +6,20 @@
 
       
 
-        async void OnIniciarClicked(object sender, EventArgs e)
+        async void OnPerfilClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("PerfilUsuario");
+        }
+        async void OnEntrarClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("Login");
         }
-
-        private void Button_Clicked(object sender, EventArgs e)
+        async void OnCadastrarClicked(object sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync("CadastroUsuario");
         }
+
+
     }
 }
 

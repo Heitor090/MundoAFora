@@ -11,6 +11,8 @@
             Routing.RegisterRoute(nameof(CadastroUsuario), typeof(CadastroUsuario));
             Routing.RegisterRoute(nameof(PerfilUsuario), typeof(PerfilUsuario));
             Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
+            
+
         }
     }
 }

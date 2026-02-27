@@ -18,7 +18,8 @@ namespace MundoAFora
             await Shell.Current.GoToAsync("CadastroUsuario");
 
         }
-        }
+      
+    }
     
 
 }
