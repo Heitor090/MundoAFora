@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MundoAFora.MainPage"
+             BackgroundColor="{StaticResource Cotton}">
+
+    <VerticalStackLayout Spacing="0">
+
+        <!-- HEADER -->
+        <Border Stroke="Black" StrokeShape="RoundRectangle 0" HeightRequest="100">
+
+            <Grid ColumnDefinitions="Auto,*,Auto,Auto,Auto,Auto"
+               BackgroundColor="{StaticResource GreenVacation}"  
+                  Padding="20,0"
+                  HeightRequest="100">
+
+                <!-- Logo -->
+                <Image Grid.Column="0"
+                    Source="logo_sem_fundo.png"
+                       WidthRequest="120"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start" />
+
+                <!-- Nome -->
+                <Label Grid.Column="0"
+                       Text="Mundo a Fora"
+                       FontSize="35"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="100,0,0,0"/>
+
+                <!-- Menu -->
+                <Button Grid.Column="4"
+                        Text="Países"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Margin="0,0,75,0"/>
+
+
+                <Button Grid.Column="5"
+                        ImageSource="icone_perfil.png"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Margin="0,0,70,0"
+                        HorizontalOptions="Center"
+                        Clicked="OnPerfilClicked"/>
+
+             
+            </Grid>
+        </Border>
+
+        <!-- SEÇÃO DA MENSAGEM -->
+        <Grid Padding="40">
+
+            <Frame
+                BackgroundColor="White"
+                CornerRadius="20"
+                Padding="30"
+                HasShadow="True"
+                HorizontalOptions="Center"
+                MaximumWidthRequest="900">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Label
+                        Text="🌍 Bem-vindo ao Mundo a Fora"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center"
+                        TextColor="Black"/>
+
+                    <Label
+                        Text="Nosso objetivo é conectar você aos melhores destinos do mundo com orientação especializada, suporte completo e uma comunidade que entende seus sonhos."
+                        FontSize="16"
+                        HorizontalTextAlignment="Center"
+                        TextColor="Gray"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </Grid>
+
+    </VerticalStackLayout>
+
+</ContentPage>

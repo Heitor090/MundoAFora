@@ -1,4 +1,4 @@
-﻿namespace MundoAFora
+namespace MundoAFora
 {
     public partial class AppShell : Shell
     {
@@ -12,6 +12,6 @@
             Routing.RegisterRoute(nameof(PerfilUsuario), typeof(PerfilUsuario));
             Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
             Routing.RegisterRoute(nameof(Pais), typeof (Pais));
-        }
+
     }
 }

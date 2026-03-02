@@ -1,4 +1,8 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MundoAFora.MainPage"
              BackgroundColor="{StaticResource Cotton}">
@@ -35,8 +39,10 @@
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
                         FontSize="22"
+
                         Margin="0,0,75,0"
                         Clicked="OnPaisClicked"/>
+
 
 
                 <Button Grid.Column="3"
@@ -45,8 +51,10 @@
                         FontAttributes="Bold"
                         FontSize="22"
                         Margin="0,0,70,0"
+
                         HorizontalOptions="Center"
                         Clicked="OnPerfilClicked"/>
+
 
                 <Button Grid.Column="4"
                         Text="Entrar"
@@ -70,8 +78,10 @@
                         CornerRadius="20"
                         WidthRequest="120"
                         HeightRequest="70"
+
                         HorizontalOptions="Center" 
                         Clicked="OnCadastrarClicked"/>
+
             </Grid>
         </Border>
 

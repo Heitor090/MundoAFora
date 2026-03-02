@@ -1,3 +1,4 @@
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MundoAFora.Login"
@@ -5,7 +6,7 @@
     <ScrollView>
         <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
             <Grid ColumnDefinitions="Auto,*,*" BackgroundColor="{StaticResource Gre}" RowDefinitions="*,*,*,*,*,*">
-                <Label Text="Países" Grid.Column="1" Grid.Row="0" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,-200,0,0" FontSize="30" />
+                <Label Text="Paï¿½ses" Grid.Column="1" Grid.Row="0" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,-200,0,0" FontSize="30" />
                 <Image HeightRequest="100" Margin="-700,0,0,300" Source="portugal.png" Grid.Row="1" Grid.Column="0" />
                 <Label Text="Portugal" Grid.Column="0" Grid.Row="2" Margin="-390,-290,0,0" FontSize="20" FontAttributes="Bold"/>
 
