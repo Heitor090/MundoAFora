@@ -14,7 +14,7 @@ namespace MundoAFora
         }
         async void OnCadastrarClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("PerfilUsuario");
+            await Shell.Current.GoToAsync("MainPage");
 
         }
 

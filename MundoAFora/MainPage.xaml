@@ -1,16 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MundoAFora.MainPage"
              BackgroundColor="{StaticResource Cotton}">
 
     <VerticalStackLayout Spacing="0">
-
         <!-- HEADER -->
-        <Border Stroke="Black" StrokeShape="RoundRectangle 20" HeightRequest="100">
+        <Border Stroke="Black" StrokeShape="RoundRectangle 0" HeightRequest="100">
 
             <Grid ColumnDefinitions="Auto,*,Auto,Auto,Auto,Auto"
-                  BackgroundColor="{StaticResource GreenTropical}"
+               BackgroundColor="{StaticResource GreenVacation}"  
                   Padding="20,0"
                   HeightRequest="100">
 
@@ -24,6 +22,7 @@
                 <!-- Nome -->
                 <Label Grid.Column="0"
                        Text="Mundo a Fora"
+                       TextColor="White"
                        FontSize="35"
                        FontAttributes="Bold"
                        VerticalOptions="Center"
@@ -32,24 +31,26 @@
 
                 <!-- Menu -->
                 <Button Grid.Column="2"
-                        Text="Home"
-                        BackgroundColor="Transparent"
-                        FontAttributes="Bold"
-                        FontSize="22"
-                        Margin="0,0,75,0"/>
-                
-
-                <Button Grid.Column="3"
                         Text="Países"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
                         FontSize="22"
+                        Margin="0,0,75,0"
+                        Clicked="OnPaisClicked"/>
+
+
+                <Button Grid.Column="3"
+                        ImageSource="icone_perfil.png"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="22"
                         Margin="0,0,70,0"
-                        HorizontalOptions="Center"/>
-                
+                        HorizontalOptions="Center"
+                        Clicked="OnPerfilClicked"/>
+
                 <Button Grid.Column="4"
                         Text="Entrar"
-                        BackgroundColor="Gray"
+                        BackgroundColor="{StaticResource GreenFlag}"
                         TextColor="White"
                         FontAttributes="Bold"
                         FontSize="16"
@@ -57,18 +58,20 @@
                         WidthRequest="120"
                         HeightRequest="70"
                         HorizontalOptions="End" 
-                         Margin="0,0,10,0"/>
+                         Margin="0,0,10,0"
+                        Clicked="OnEntrarClicked"/>
 
                 <Button Grid.Column="5"
                         Text="Cadastrar"
-                        BackgroundColor="Gray"
+                        BackgroundColor="{StaticResource GreenFlag}"
                         TextColor="White"
                         FontAttributes="Bold"
                         FontSize="16"
                         CornerRadius="20"
                         WidthRequest="120"
                         HeightRequest="70"
-                        HorizontalOptions="Center" />   
+                        HorizontalOptions="Center" 
+                        Clicked="OnCadastrarClicked"/>
             </Grid>
         </Border>
 
@@ -99,6 +102,62 @@
                         TextColor="Gray"/>
 
                 </VerticalStackLayout>
+
+            </Frame>
+
+
+
+        </Grid>
+
+    
+
+
+        <Grid Padding="50">
+
+            <Frame
+          BackgroundColor="White"
+          CornerRadius="50"
+          Padding="30"
+          HasShadow="True"
+          HorizontalOptions="Center"
+          MaximumWidthRequest="900">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label
+                   Text="Informações sobre migração internacional" 
+                  FontSize="28"
+                  FontAttributes="Bold"
+                  HorizontalTextAlignment="Center"
+                  TextColor="Black"/>
+                    <VerticalStackLayout >
+
+                        <Label 
+
+        FontSize="20"
+        FontAttributes="Bold"
+        HorizontalOptions="Center"/>
+
+                        <Label 
+        LineBreakMode="WordWrap"
+        Text="Oferecemos orientação especializada para quem deseja morar, estudar ou trabalhar no exterior. Disponibilizamos conteúdos atualizados sobre:"
+        Margin="0,0,100,10"/>
+
+                        <Label Text="• Tipos de vistos" />
+                        <Label Text="• Processos de residência" />
+                        <Label Text="• Documentação necessária" />
+                        <Label Text="• Oportunidades de estudo e trabalho" />
+                        <Label Text="• Direitos e deveres do imigrante" />
+
+                        <Label 
+        LineBreakMode="WordWrap"
+        Margin="0,15,0,0"
+        Text="Navegue pelo site e encontre as informações necessárias para tomar decisões seguras e bem fundamentadas." />
+
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+
 
             </Frame>
 
