@@ -1,4 +1,4 @@
-﻿using MundoAFora.Services;
+using MundoAFora.Services;
 using MundoAFora.DTO;
 using System;
 using System.Collections.Generic;
@@ -23,6 +23,9 @@ namespace MundoAFora
         }
         async void OnCadastrarClicked(object sender, EventArgs e)
         {
+
+            await Shell.Current.GoToAsync("MainPage");
+
             string nome = Nome.Text;
             string cpf = CPF.Text;
             DateTime dataNascimento = DataNascimento.Date;
@@ -71,6 +74,7 @@ namespace MundoAFora
                 throw new Exception(erro.Message);
             
             }
+
 
 
 

@@ -1,10 +1,10 @@
-﻿namespace MundoAFora
+namespace MundoAFora
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage() {InitializeComponent(); }
+        public MainPage() { InitializeComponent(); }
 
-      
+
 
         async void OnPerfilClicked(object sender, EventArgs e)
         {
@@ -17,10 +17,21 @@
         async void OnCadastrarClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("CadastroUsuario");
+
         }
+
+        async void OnPaisClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Pais");
+        }
+
+
+        }
+
 
 
     }
 }
+
 
 
